@@ -7,7 +7,11 @@ import guardianFont from '../assets/fonts/guardian.json'
 
 extend({ TextGeometry })
 
-function GuardianText(props: ThreeElements['mesh']) {
+interface GuardianTextProps {
+  size: number
+}
+
+function GuardianText(props: ThreeElements['mesh'] & GuardianTextProps) {
   const mesh = useRef<THREE.Mesh>(null!)
   const [hovered, setHover] = useState(false)
   const [active, setActive] = useState(false)
@@ -15,16 +19,18 @@ function GuardianText(props: ThreeElements['mesh']) {
 
   const font = new FontLoader().parse(guardianFont);
 
+  const { position, size }= props
+
   return (
     <mesh
-      {...props}
+      position={position}
       ref={mesh}
       scale={active ? 1.5 : 1}
       onClick={() => setActive(!active)}
       onPointerOver={() => setHover(true)}
       onPointerOut={() => setHover(false)}>
       <sphereGeometry />
-      <textGeometry attach='geometry'args={['G', {font, size: 3, height: 0.1}]} />
+      <textGeometry attach='geometry'args={['G', {font, size: size, height: 0.1}]} />
       <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
     </mesh>
   )
