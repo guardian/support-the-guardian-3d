@@ -29,7 +29,6 @@ function GuardianText(props: ThreeElements['mesh'] & GuardianTextProps) {
       onClick={() => setActive(!active)}
       onPointerOver={() => setHover(true)}
       onPointerOut={() => setHover(false)}>
-      <sphereGeometry />
       <textGeometry attach='geometry'args={['G', {font, size: size, height: 0.1}]} />
       <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
     </mesh>
