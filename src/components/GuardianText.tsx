@@ -19,7 +19,7 @@ function GuardianText(props: ThreeElements['mesh'] & GuardianTextProps) {
 
   const font = new FontLoader().parse(guardianFont);
 
-  const { position, size }= props
+  const { position, size } = props
 
   return (
     <mesh
@@ -29,7 +29,7 @@ function GuardianText(props: ThreeElements['mesh'] & GuardianTextProps) {
       onClick={() => setActive(!active)}
       onPointerOver={() => setHover(true)}
       onPointerOut={() => setHover(false)}>
-      <textGeometry attach='geometry' args={['G', {font, size: size, height: 0.1}]} />
+      <textGeometry attach='geometry' args={['G', {font, size, height: 0.1}]} />
       <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
     </mesh>
   )

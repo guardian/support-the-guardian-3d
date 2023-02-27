@@ -1,6 +1,5 @@
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
 
-
 /// <reference types="react-scripts" />
 
 // Add types to ThreeElements elements so primitives pick up on it

@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.6",
+    "@react-spring/types": "^9.7.0",
+    "@react-three/drei": "^9.56.27",
     "@react-three/fiber": "^8.11.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -16,7 +18,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "react-spring": "^9.7.0",
     "three": "^0.149.0",
+    "three-stdlib": "^2.21.8",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
